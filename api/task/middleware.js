@@ -1,5 +1,3 @@
-const Project = require("./../project/model");
-
 function validateTaskBody(req, res, next) {
   if (!req.body.task_description || !req.body.task_description.trim()) {
     next({ status: 400, message: "task description is required" });

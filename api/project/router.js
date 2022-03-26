@@ -6,7 +6,7 @@ const { validateProject } = require("./middleware");
 router.get("/", async (req, res, next) => {
   try {
     const projects = await Project.getAll();
-    res.json(projects);
+    res.status(200).json(projects);
   } catch (err) {
     next(err);
   }
